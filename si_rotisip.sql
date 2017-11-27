@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2017 at 03:30 AM
+-- Generation Time: Nov 27, 2017 at 04:01 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -27,80 +27,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `barang` (
-  `id_barang` int(11) NOT NULL,
-  `jenis_barang` varchar(30) NOT NULL,
-  `nama_barang` varchar(30) NOT NULL,
-  `harga_barang` int(11) NOT NULL,
-  `foto_barang` varchar(30) NOT NULL,
-  `masaberlaku_barang` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
+  `brg_id` int(11) NOT NULL,
+  `brg_jenis` varchar(30) NOT NULL,
+  `brg_nama` varchar(30) NOT NULL,
+  `brg_harga` int(11) NOT NULL,
+  `brg_foto` varchar(30) NOT NULL,
+  `brg_masaberlaku` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=latin1;
 
 --
--- Table structure for table `barang_masuk`
+-- Dumping data for table `barang`
 --
 
-CREATE TABLE IF NOT EXISTS `barang_masuk` (
-  `id_barangmasuk` int(11) NOT NULL,
-  `tgl_barangmasuk` date NOT NULL,
-  `jam_barangmasuk` time NOT NULL,
-  `total_item_barangmasuk` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `detail_barangmasuk`
---
-
-CREATE TABLE IF NOT EXISTS `detail_barangmasuk` (
-  `id_barangmasuk` int(11) NOT NULL,
-  `id_barang` int(11) NOT NULL,
-  `jumlah_detail_barangmasuk` int(11) NOT NULL,
-  `stok_detail_barangmasuk` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `detail_penjualan`
---
-
-CREATE TABLE IF NOT EXISTS `detail_penjualan` (
-  `id_penjualan` int(11) NOT NULL,
-  `id_barang` int(11) NOT NULL,
-  `jumlah_detail_penjualan` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `penjualan`
---
-
-CREATE TABLE IF NOT EXISTS `penjualan` (
-  `id_penjualan` int(11) NOT NULL,
-  `tgl_penjualan` date NOT NULL,
-  `jam_penjualan` time NOT NULL,
-  `total_item_penjualan` int(11) NOT NULL,
-  `cash_penjualan` int(11) NOT NULL,
-  `kembali_penjualan` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE IF NOT EXISTS `user` (
-  `id_user` int(11) NOT NULL,
-  `password_user` varchar(10) NOT NULL,
-  `nama_user` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `barang` (`brg_id`, `brg_jenis`, `brg_nama`, `brg_harga`, `brg_foto`, `brg_masaberlaku`) VALUES
+(105, 'kering', 'roti pisang', 3000, 'asd.jpeg', '2017-11-30'),
+(109, 'kering', 'roti coklat', 2500, 'eeea.jpeg', '2017-11-30');
 
 --
 -- Indexes for dumped tables
@@ -110,37 +51,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Indexes for table `barang`
 --
 ALTER TABLE `barang`
-  ADD PRIMARY KEY (`id_barang`);
-
---
--- Indexes for table `barang_masuk`
---
-ALTER TABLE `barang_masuk`
-  ADD PRIMARY KEY (`id_barangmasuk`,`id_user`);
-
---
--- Indexes for table `detail_barangmasuk`
---
-ALTER TABLE `detail_barangmasuk`
-  ADD PRIMARY KEY (`id_barangmasuk`,`id_barang`);
-
---
--- Indexes for table `detail_penjualan`
---
-ALTER TABLE `detail_penjualan`
-  ADD PRIMARY KEY (`id_penjualan`,`id_barang`);
-
---
--- Indexes for table `penjualan`
---
-ALTER TABLE `penjualan`
-  ADD PRIMARY KEY (`id_penjualan`,`id_user`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`brg_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -150,32 +61,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `barang_masuk`
---
-ALTER TABLE `barang_masuk`
-  MODIFY `id_barangmasuk` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `detail_barangmasuk`
---
-ALTER TABLE `detail_barangmasuk`
-  MODIFY `id_barangmasuk` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `detail_penjualan`
---
-ALTER TABLE `detail_penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `penjualan`
---
-ALTER TABLE `penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `brg_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=110;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
