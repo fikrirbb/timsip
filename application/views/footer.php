@@ -2,7 +2,7 @@
 <!-- footer -->
 <!-- ============================================================== -->
 <footer class="footer">
-    © 2017 Admin Press Admin by themedesigner.in
+    © 2017 SIP Developer Team. All right reserved.
 </footer>
 <!-- ============================================================== -->
 <!-- End footer -->
