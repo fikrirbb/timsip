@@ -36,6 +36,7 @@ class CLogin extends CI_Controller {
 
 			redirect(base_url("index.php/CDashboard"));
     } else {
+
     	redirect(base_url('index.php/CLogin/'));
 			//redirect(base_url("CLogin"));
     }

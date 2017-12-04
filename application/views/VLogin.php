@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="http://themedesigner.in/demo/admin-press/assets/images/favicon.png">
-    <title>Admin Press Admin Template - The Ultimate Bootstrap 4 Admin Template</title>
+    <title>SI Penjualan Roti SIP</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url()?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -41,7 +41,7 @@
             <div class="login-box card">
                 <div class="card-body">
                     <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url('index.php/CLogin/CekLogin') ?>" method="post">
-                        <h3 class="box-title m-b-20">Masuk SI Penjualan Roti SIP</h3>
+                        <h3 class="box-title m-b-20">SI Penjualan Roti SIP</h3>
                         <div class="form-group ">
                             <div class="col-xs-12">
                                 <input class="form-control" type="text" required="" placeholder="Username" name="usr_id"> </div>
@@ -52,12 +52,12 @@
                         </div>
                         <div class="form-group text-center m-t-20">
                             <div class="col-xs-12">
-                                <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
+                                <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Masuk</button>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a> </div>
+                                <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i>Lupa Password?</a> </div>
                         </div>
                     </form>
                     <form class="form-horizontal" id="recoverform" action="index.html">
