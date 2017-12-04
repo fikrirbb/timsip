@@ -38,6 +38,17 @@
 <!-- Style switcher -->
 <!-- ============================================================== -->
 <script src="<?php echo base_url()?>assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+<script src="<?php echo base_url()?>assets/plugins/dropify/dist/js/dropify.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Basic
+        $('.dropify').dropify();
+
+    });
+
+    </script>
+
 </body>
 
 </html>

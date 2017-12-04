@@ -32,9 +32,71 @@
         <!-- ============================================================== -->
         <div class="row">
             <div class="col-12">
-			
-			
-                <!-- TARUH DISINI -->
+			<div class="card card-outline-info">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">Input Barang</h4>
+                            </div>
+                            <div class="card-body">
+                                <form action="form-layout.html#">
+                                    <div class="form-body">
+                                        
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Id Barang</label>
+                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
+                                                    <small class="form-control-feedback"> This is inline help </small> </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Harga Barang</label>
+                                                    <input type="text" name="brg_harga" class="form-control" placeholder="12n">
+                                                    <small class="form-control-feedback"> This field has error. </small> </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nama Barang</label>
+                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
+                                                    <small class="form-control-feedback"> This is inline help </small> </div>
+                                            </div>
+                                            
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group has-success">
+                                                    <label class="control-label">Jenis Barang</label>
+                                                    <select class="form-control custom-select">
+                                                        <option value="">Kering</option>
+                                                        <option value="">Basah</option>
+                                                    </select>
+                                                    <small class="form-control-feedback"> Pilih jenis barang </small> </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row p-t-20">
+										<div class="col-md-6">
+                                           <div class="form-group">
+                                                    <label class="control-label">Masa Berlaku Barang</label>
+                                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                                </div>
+												</div>
+                                            <!--/span-->
+											<div class="col-lg-6 col-md-6">
+													<label for="input-file-now">Upload Gambar</label>
+													<input type="file" id="input-file-now" class="dropify" />
+
+											</div>
+								</div>
+								<button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+
+</div>								
 				
 				
 				
