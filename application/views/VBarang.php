@@ -48,10 +48,6 @@
                                                 <th>Foto Barang</th>
                                                 <th>Masa Berlaku Barang</th>
 												<th style ="width:125px;">Aksi</th>
-												<?php
-												foreach($barang as $b)?>
-			<td><button class="btn btn-warning" onclick="edit"('<?php echo $b->brg_id;?>')"><i class="glyphicon glyphicon-pencil"></i></button>
-			<td><button class="btn btn-warning" onclick="delete"('<?php echo $b->brg_id;?>')"><i class="glyphicon glyphicon-remove"></i></button>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -67,11 +63,13 @@
 			<td>$b->brg_harga</td>
 			<td>$b->brg_foto</td>
 			<td>$b->brg_masaberlaku</td>
-			<td>
+			"?><td><button class="btn btn-warning" onclick="edit"('<?php echo $b->brg_id;?>')"><i class="glyphicon glyphicon-pencil"></i></button>
+			<td><button class="btn btn-warning" onclick="delete"('<?php echo $b->brg_id;?>')"><i class="glyphicon glyphicon-remove"></i></button>
 			
 			
 			
-			</tr>";
+			</tr>
+			<?php
 	$no++;}
 	echo "</table>";
 	?>

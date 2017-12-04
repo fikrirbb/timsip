@@ -32,12 +32,41 @@
         <!-- ============================================================== -->
         <div class="row">
             <div class="col-12">
-			
-			
-                <!-- TARUH DISINI -->
-				
-				
-				
+                <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Data Table</h4>
+                                <h6 class="card-subtitle">Data table example</h6>
+                                <div class="table-responsive m-t-40">
+                                    <table id="myTable" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Id Barang</th>
+                                                <th>Jenis Barang</th>
+                                                <th>Nama Barang</th>
+                                                <th>Harga Barang</th>
+                                                <th>Foto Barang</th>
+                                                <th>Masa Berlaku Barang</th>
+												<th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($barang as $b): ?>
+											  <tr>
+												<td><?php echo $b->id_barang ?></td>
+												<td><?php echo $b->jenis_barang ?></td>
+												<td><?php echo $b->nama_barang ?></td>
+												<td><?php echo $b->harga_barang ?></td>
+												<td><?php echo $b->foto_barang ?></td>
+												<td><?php echo $b->masaberlaku_barang ?></td>
+												<td><?php echo anchor('Controllerbarang/edit/'.$b->id_barang, ' Ubah ') . '| | ' .
+														   anchor('Controllerbarang/delete/'.$b->id_barang, ' Hapus '); ?> </td>
+											  </tr>
+											<?php endforeach ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
             </div>
         </div>
         <!-- ============================================================== -->

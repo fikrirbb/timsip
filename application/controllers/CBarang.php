@@ -12,6 +12,13 @@ class CBarang extends CI_Controller{
 		$this->load->view('VBarang',$data);
 		$this->load->view('footer');
 	}
+	
+	function tambah()
+	{
+		$this->load->view('header');
+		$this->load->view('VTambah');
+		$this->load->view('footer');
+	}
 
 	
 }

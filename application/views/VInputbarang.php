@@ -31,10 +31,85 @@
         <!-- Start Page Content -->
         <!-- ============================================================== -->
         <div class="row">
-            <div class="col-12">
-			
-			
-                <!-- TARUH DISINI -->
+        <div class="col-12">
+        <div class="card card-outline-info">
+        <div class="card-header">
+        <h4 class="m-b-0 text-white">Form Barang</h4>
+         </div>
+        <div class="card-body">
+     <!--   <form action="<?php //echo base_url('index.php/CInputbarang/tambah');?>">-->
+         <div class="form-body">
+		 <h3 class="card-title">Input Barang</h3>
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+							<body>
+<?php if(@$msg<>"") echo @$msg; ?>
+<form action="<?php echo base_url();?>index.php?c=CInputbarang&m=simpan" method="post">
+                                                    <label class="control-label">Id Barang</label>
+                                                    <input type="text" id="brg_id" class="form-control" placeholder="id">
+                                                    <small class="form-control-feedback"> This is inline help </small> </div>
+                                            </div>
+											 <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger">
+                                                    <label class="control-label">Harga Barang</label>
+                                                    <input type="text" id="brg_jenis" class="form-control" placeholder="harga">
+                                                    <small class="form-control-feedback">  </small> </div>
+                                            </div>
+                                            <!--/span-->
+											</div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group has-success">
+                                                    <label class="control-label">Jenis Barang</label>
+                                                    <select class="form-control custom-select">
+                                                        <option value="">Kering</option>
+                                                        <option value="">Basah</option>
+                                                    </select>
+                                                    <small class="form-control-feedback"> Pilih Barang </small> </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Masa Berlaku Barang</label>
+                                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nama Barang</label>
+                                                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                                                        <option value="Category 1">Roti Coklat</option>
+                                                        <option value="Category 2">Roti Sobek</option>
+                                                        <option value="Category 3">Roti Pisang</option>
+                                                        <option value="Category 4">Roti Kasur</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Foto Barang</label>
+                                                    <img src="<?php echo base_url(); ?>assets/images/gallery/roticoklat.jpg">
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="form-actions">
+                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+                                        <button type="button" class="btn btn-inverse">Cancel</button>
+                                    </div>
+</form>
+</div>
+</div>
+</div>
+
 				
 				
 				
