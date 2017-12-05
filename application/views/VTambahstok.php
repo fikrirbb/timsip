@@ -34,7 +34,7 @@
             <div class="col-12">
 			<div class="card card-outline-info">
                             <div class="card-header">
-                                <h4 class="m-b-0 text-white">Input Barang</h4>
+                                <h4 class="m-b-0 text-white">Stok Barang</h4>
                             </div>
                             <div class="card-body">
                                 <form action="form-layout.html#">
@@ -45,14 +45,14 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">Id Barang</label>
-                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
+                                                    <input type="text" name="brg_id" class="form-control" placeholder="id">
                                                     <small class="form-control-feedback"> </small> </div>
                                             </div>
                                             <!--/span-->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">Harga Barang</label>
-                                                    <input type="text" name="brg_harga" class="form-control" placeholder="12n">
+                                                    <input type="text" name="brg_harga" class="form-control" placeholder="Rp.">
                                                     <small class="form-control-feedback"> input harga barang </small> </div>
                                             </div>
                                             <!--/span-->
@@ -62,7 +62,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">Nama Barang</label>
-                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
+                                                    <input type="text" name="brg_id" class="form-control" placeholder="nama barang">
                                                     <small class="form-control-feedback"> input nama barang </small> </div>
                                             </div>
                                             

@@ -32,74 +32,53 @@
         <!-- ============================================================== -->
         <div class="row">
             <div class="col-12">
-			<div class="card card-outline-info">
-                            <div class="card-header">
-                                <h4 class="m-b-0 text-white">Input Barang</h4>
-                            </div>
+                <div class="card">
                             <div class="card-body">
-                                <form action="form-layout.html#">
-                                    <div class="form-body">
-                                        
-                                        <hr>
-                                        <div class="row p-t-20">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Id Barang</label>
-                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
-                                                    <small class="form-control-feedback"> </small> </div>
-                                            </div>
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Harga Barang</label>
-                                                    <input type="text" name="brg_harga" class="form-control" placeholder="12n">
-                                                    <small class="form-control-feedback"> input harga barang </small> </div>
-                                            </div>
-                                            <!--/span-->
-                                        </div>
-                                        <!--/row-->
-                                        <div class="row p-t-20">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Nama Barang</label>
-                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
-                                                    <small class="form-control-feedback"> input nama barang </small> </div>
-                                            </div>
-                                            
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group has-success">
-                                                    <label class="control-label">Jenis Barang</label>
-                                                    <select class="form-control custom-select">
-                                                        <option value="">Kering</option>
-                                                        <option value="">Basah</option>
-                                                    </select>
-                                                    <small class="form-control-feedback"> Pilih jenis barang </small> </div>
-                                            </div>
-                                            <!--/span-->
-                                        </div>
-                                        <!--/row-->
-                                        <div class="row p-t-20">
-										<div class="col-md-6">
-                                           <div class="form-group">
-                                                    <label class="control-label">Masa Berlaku Barang</label>
-                                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
-                                                </div>
-												</div>
-                                            <!--/span-->
-											<div class="col-lg-6 col-md-6">
-													<label for="input-file-now">Upload Gambar</label>
-													<input type="file" id="input-file-now" class="dropify" />
-
-											</div>
-								</div>
-								<button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
-
-</div>								
-				
-				
-				
+                                <h4 class="card-title">Stok Barang</h4>
+                                <h6 class="card-subtitle"></h6>
+                                <div class="table-responsive m-t-40">
+                                    <table id="myTable" class="table table-bordered table-striped">
+									<button class="btn btn-success" onclick="add_book()"><i class="glyphicon glyphicon-plus"></i>Tambah Data</button><br>
+									</br>
+                                        <thead>
+                                            <tr>
+                                                <th>Id Barang</th>
+                                                <th>Jenis Barang</th>
+                                                <th>Nama Barang</th>
+                                                <th>Harga Barang</th>
+                                                <th>Foto Barang</th>
+                                                <th>Masa Berlaku Barang</th>
+												<th style ="width:125px;">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+	
+			$no=1;
+			foreach($barang as $b)
+			{
+			echo "<tr>
+			<td>$b->brg_id</td>
+			<td>$b->brg_jenis</td>
+			<td>$b->brg_nama</td>
+			<td>$b->brg_harga</td>
+			<td>$b->brg_foto</td>
+			<td>$b->brg_masaberlaku</td>
+			"?><td><button class="btn btn-warning" onclick="edit"('<?php echo $b->brg_id;?>')"><i class="glyphicon glyphicon-pencil"></i></button>
+			<td><button class="btn btn-warning" onclick="delete"('<?php echo $b->brg_id;?>')"><i class="glyphicon glyphicon-remove"></i></button>
+			
+			
+			
+			</tr>
+			<?php
+	$no++;}
+	echo "</table>";
+	?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
             </div>
         </div>
         <!-- ============================================================== -->
