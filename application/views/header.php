@@ -58,7 +58,7 @@
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-              
+
                          <!-- Light Logo text -->
                          <img src="<?php echo base_url()?>assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
@@ -91,21 +91,21 @@
                                             <a href="pages-blank.html#">
                                                 <div class="btn btn-danger btn-circle"><i class="ti-barang"></i></div>
                                                 <div class="mail-contnet">
-                                                    <h5>Barang</h5> 
+                                                    <h5>Barang</h5>
                                             </a>
                                             <!-- Message -->
                                             <a href="pages-blank.html#">
                                                 <div class="btn btn-success btn-circle"><i class="ti-stok"></i></div>
                                                 <div class="mail-contnet">
-                                                    <h5>Stok</h5> 
+                                                    <h5>Stok</h5>
                                             </a>
                                             <!-- Message -->
                                             <a href="pages-blank.html#">
                                                 <div class="btn btn-info btn-circle"><i class="ti-pengeluaran"></i></div>
                                                 <div class="mail-contnet">
-                                                    <h5>Pengeluaran</h5> 
+                                                    <h5>Pengeluaran</h5>
                                             </a>
-                                            
+
                                         </div>
                                     </li>
                                     <li>
@@ -120,7 +120,7 @@
                         <!-- ============================================================== -->
                         <!-- Messages -->
                         <!-- ============================================================== -->
-                       
+
                         </li>
                     </ul>
                 </div>
@@ -144,25 +144,8 @@
                     </div>
                     <!-- User profile text-->
                     <div class="profile-text">
-                            <h5>SIP</h5>
-                            <a href="pages-blank.html#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
-                             <a href="app-email.html" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                            <a href="pages-login.html" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
-
-                        <div class="dropdown-menu animated flipInY">
-                        <!-- text-->
-                        <a href="pages-blank.html#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
-                    
-                        <!-- text-->
-                        <div class="dropdown-divider"></div>
-                        <!-- text-->
-                        <a href="pages-blank.html#" class="dropdown-item"><i class="ti-settings"></i> Konfigurasi User</a>
-                        <!-- text-->
-                        <div class="dropdown-divider"></div>
-                        <!-- text-->
-                        <a href="http://themedesigner.in/demo/admin-press/main/login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
-                        <!-- text-->
-                        </div>
+                            <h5>Admin</h5>
+                            <a href="<?php echo base_url('index.php/CLogin/logout') ?>" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
                     </div>
                 </div>
                 <!-- End User profile text-->
@@ -188,13 +171,13 @@
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="pages-blank.html#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Penjualan Barang</span></a>
-                            
+
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="pages-blank.html#" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Laporan Penjualan <span class="label label-rouded label-danger pull-right">25</span></span></a>
-                           
 
-                     
-                     
+
+
+
                         </li>
 
 
