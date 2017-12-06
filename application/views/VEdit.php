@@ -32,55 +32,79 @@
         <!-- ============================================================== -->
         <div class="row">
             <div class="col-12">
-			
-			
-            <div id="page-content-wrapper">
-    <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas"> <span class="hamb-top"></span> <span class="hamb-middle"></span> <span class="hamb-bottom"></span> </button>
-    <div class="container">
-  <div class="card card-container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1 class="page-header"><font color ="black">Edit Data Barang</font></h1>
-      <br>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <?php echo form_open_multipart('CBarang/update/'.$this->uri->segment(3)); ?>
-      </div>  
-            <!--<pre><?php 
-            var_dump($admin); 
-            ?>-->
-            </pre>
-            <?php echo validation_errors(); ?>
-            <div class="form-group">
+			<div class="card card-outline-info">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">Edit Barang</h4>
+                            </div>
+                            <div class="card-body">
+                                <form action="form-layout.html#">
+                                    <div class="form-body">
+                                        
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Id Barang</label>
+                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
+                                                    <small class="form-control-feedback"> </small> </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Harga Barang</label>
+                                                    <input type="text" name="brg_harga" class="form-control" placeholder="Rp.">
+                                                    <small class="form-control-feedback"></small> </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nama Barang</label>
+                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
+                                                    <small class="form-control-feedback"></small> </div>
+                                            </div>
+                                            
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group has-success">
+                                                    <label class="control-label">Jenis Barang</label>
+                                                    <select class="form-control custom-select">
+                                                        <option value="">Kering</option>
+                                                        <option value="">Basah</option>
+                                                    </select>
+                                                    <small class="form-control-feedback"> Pilih jenis barang </small> </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row p-t-20">
+										<div class="col-md-6">
+                                           <div class="form-group">
+                                                    <label class="control-label">Masa Berlaku Barang</label>
+                                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                                </div>
+												</div>
+                                            <!--/span-->
+											<div class="col-lg-6 col-md-6">
+													<label for="input-file-now">Upload Gambar</label>
+													<input type="file" id="input-file-now" class="dropify" />
 
-              <label for="">Id Barang</label>
-              <input type="text" class="form-control" id="brg_id" name="brg_id" placeholder="Edit Nama Admin" value="<?php echo $barang[0]->brg_id?>">
-              <br>
-              <label for="">Jenis Barang</label>
-              <input type="text" class="form-control" id="brg_jenis" name="brg_jenis" placeholder="Edit Password" value="<?php echo $barang[0]->brg_jenis?>">
-              <br>
-              <label for="">Nama Barang</label>
-              <input type="text" class="form-control" id="brg_nama" name="brg_nama" placeholder="Edit Alamat Admin" value="<?php echo $barang[0]->brg_nama?>">
-              <br>
-              <label for="">Harga Barang</label>
-              <input type="number" class="form-control" id="brg_harga" name="brg_harga" placeholder="Edit Nomor Telepon" value="<?php echo $barang[0]->brg_harga?>">
-              <br>
-			  <label for="">Foto Barang</label>
-              <input type="number" class="form-control" id="brg_foto" name="brg_foto" placeholder="Edit Nomor Telepon" value="<?php echo $barang[0]->brg_foto?>">
-              <br>
-			  <label for="">Masa Berlaku Barang</label>
-              <input type="number" class="form-control" id="brg_masaberlaku" name="brg_masaberlaku" placeholder="Edit Nomor Telepon" value="<?php echo $barang[0]->brg_masaberlaku?>">
-              <br>
-			  
-			  
-                <button type="submit" class="btn btn-primary">Simpan</button>
-          <?php echo form_close(); ?>
-          </div>
-        </div>
+											</div>
+								</div>
+								<button type="simpan" class="btn btn-success waves-effect waves-light m-r-10">Simpan</button>
+                                        <button type="simpan" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+
+</div>								
 				
 				
 				
             </div>
-        </div>
+        </div>	
+				
+				
+        
         <!-- ============================================================== -->
         <!-- End PAge Content -->
         <!-- ============================================================== -->
