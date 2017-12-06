@@ -26,7 +26,7 @@
 <![endif]-->
 </head>
 
-<body class="fix-header card-no-border">
+<body class="fix-header fix-sidebar card-no-border">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -51,16 +51,17 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="<?php echo base_url()?>assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="<?php echo base_url() ?>assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="<?php echo base_url()?>assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="<?php echo base_url() ?>assets/images/logo-light-icon.png" alt="  homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
-                        <!-- Logo text --><span>
+                        <!-- Logo text --><span> ROTI <b class="font-weight-bold">SIP</b>
                          <!-- dark Logo text -->
-
+                         <!-- <img src="<?php echo base_url() ?>assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
                          <!-- Light Logo text -->
-                         <img src="<?php echo base_url()?>assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                         <!-- <img src="<?php echo base_url() ?>assets/images/logo-light-text.png" class="light-logo" alt="homepage" />-->
+                       </span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -77,39 +78,41 @@
                         <!-- Comment -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted text-muted waves-effect waves-dark" href="pages-blank.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-message"></i>
+                            <a class="nav-link dropdown-toggle text-muted text-muted waves-effect waves-dark" href="index4.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-message"></i>
                                 <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                             </a>
                             <div class="dropdown-menu mailbox scale-up-left">
                                 <ul>
                                     <li>
-                                        <div class="drop-title">Notifications</div>
+                                        <div class="drop-title">Pemberitahuan</div>
                                     </li>
                                     <li>
                                         <div class="message-center">
                                             <!-- Message -->
-                                            <a href="pages-blank.html#">
-                                                <div class="btn btn-danger btn-circle"><i class="ti-barang"></i></div>
+                                            <a href="index4.html#">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
                                                 <div class="mail-contnet">
-                                                    <h5>Barang</h5>
+                                                    <h5>Luanch Admin</h5> <span class="mail-desc">Just see the my new admin!</span> <span class="time">9:30 AM</span> </div>
                                             </a>
                                             <!-- Message -->
-                                            <a href="pages-blank.html#">
-                                                <div class="btn btn-success btn-circle"><i class="ti-stok"></i></div>
+                                            <a href="index4.html#">
+                                                <div class="btn btn-success btn-circle"><i class="ti-calendar"></i></div>
                                                 <div class="mail-contnet">
-                                                    <h5>Stok</h5>
+                                                    <h5>Event today</h5> <span class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span> </div>
                                             </a>
                                             <!-- Message -->
-                                            <a href="pages-blank.html#">
-                                                <div class="btn btn-info btn-circle"><i class="ti-pengeluaran"></i></div>
+                                            <a href="index4.html#">
+                                                <div class="btn btn-info btn-circle"><i class="ti-settings"></i></div>
                                                 <div class="mail-contnet">
-                                                    <h5>Pengeluaran</h5>
+                                                    <h5>Settings</h5> <span class="mail-desc">You can customize this template as you want</span> <span class="time">9:08 AM</span> </div>
                                             </a>
-
+                                            <!-- Message -->
+                                            <a href="index4.html#">
+                                                <div class="btn btn-primary btn-circle"><i class="ti-user"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                            </a>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
                                     </li>
                                 </ul>
                             </div>
@@ -117,10 +120,43 @@
                         <!-- ============================================================== -->
                         <!-- End Comment -->
                         <!-- ============================================================== -->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
                         <!-- ============================================================== -->
-                        <!-- Messages -->
+                        <!-- Search -->
                         <!-- ============================================================== -->
-
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="index4.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url() ?>assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                            <div class="dropdown-menu dropdown-menu-right scale-up">
+                                <ul class="dropdown-user">
+                                    <li>
+                                        <div class="dw-user-box">
+                                            <div class="u-img"><img src="<?php echo base_url() ?>assets/images/users/1.jpg" alt="user"></div>
+                                            <div class="u-text">
+                                                <h4>Steave Jobs</h4>
+                                                <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="index4.html#"><i class="ti-user"></i> My Profile</a></li>
+                                    <li><a href="index4.html#"><i class="ti-wallet"></i> My Balance</a></li>
+                                    <li><a href="index4.html#"><i class="ti-email"></i> Inbox</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="index4.html#"><i class="ti-settings"></i> Account Setting</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="index4.html#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -132,20 +168,19 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-      <aside class="left-sidebar">
+        <aside class="left-sidebar">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
                 <!-- User profile -->
-                <div class="user-profile">
+                <div class="user-profile ">
                     <!-- User profile image -->
-                    <div class="profile-img"> <img src="<?php echo base_url()?>assets/images/users/profile.png" alt="user" />
+                    <div class="profile-img"> <img src="<?php echo base_url() ?>assets/images/users/profile.png" alt="user" />
                              <!-- this is blinking heartbit-->
                             <div class="notify setpos"> <span class="heartbit"></span> <span class="point"></span> </div>
                     </div>
                     <!-- User profile text-->
                     <div class="profile-text">
-                            <h5>Admin</h5>
-                            <a href="<?php echo base_url('index.php/CLogin/logout') ?>" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+                            <h5>Supaji Tjatmiko</h5>
                     </div>
                 </div>
                 <!-- End User profile text-->
@@ -153,31 +188,24 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                          <li class="nav-devider"></li>
-                        <li class="nav-small-cap"></li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="pages-blank.html#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Manipulasi Barang <span class="label label-rouded label-themecolor pull-right">4</span></span></a>
+                        <li class="nav-small-cap">PERSONAL</li>
+                        <li class="active"> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Penjualan</span></a>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Master</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="index.html">Tampil Barang </a></li>
-                                <li><a href="index2.html">Tambah</a></li>
-                                <li><a href="index3.html">Edit</a></li>
-                                <li><a href="index4.html">Hapus</a></li>
+                                <li><a href="app-calendar.html">Barang</a></li>
+                                <li><a href="app-chat.html">Stok</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="pages-blank.html#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Pengadaan Stok</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="index.html">Tampil Barang </a></li>
-                                <li><a href="index2.html">Tambah</a></li>
-                                <li><a href="index3.html">Edit</a></li>
-                                <li><a href="index4.html">Hapus</a></li>
-                            </ul>
+                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Laporan</span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="pages-blank.html#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Penjualan Barang</span></a>
 
+                        <li class="nav-small-cap">OTHER</li>
+                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Akun</span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="pages-blank.html#" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Laporan Penjualan <span class="label label-rouded label-danger pull-right">25</span></span></a>
-
-
-
-
+                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Logout</span></a>
                         </li>
 
 

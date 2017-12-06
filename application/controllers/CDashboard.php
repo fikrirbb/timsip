@@ -15,7 +15,7 @@ class CDashboard extends CI_Controller {
 	{
 		//$this->load->view('welcome_message');
 		$this->load->view('header');
-		$this->load->view('dashboard');
+		$this->load->view('VDashboard');
 		$this->load->view('footer');
 	}
 
