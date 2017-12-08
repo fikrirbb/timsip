@@ -39,8 +39,6 @@
                             <div class="card-body">
                                 <form action="form-layout.html#">
                                     <div class="form-body">
-                                        
-                                        <hr>
                                         <div class="row p-t-20">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -65,7 +63,7 @@
                                                     <input type="text" name="brg_id" class="form-control" placeholder="John doe">
                                                     <small class="form-control-feedback"> input nama barang </small> </div>
                                             </div>
-                                            
+
                                             <!--/span-->
                                             <div class="col-md-6">
                                                 <div class="form-group has-success">
@@ -96,10 +94,10 @@
 								<button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                                         <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
 
-</div>								
-				
-				
-				
+</div>
+
+
+
             </div>
         </div>
         <!-- ============================================================== -->

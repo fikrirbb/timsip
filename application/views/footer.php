@@ -40,10 +40,14 @@
 <script src="<?php echo base_url()?>assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 
 <script src="<?php echo base_url()?>assets/plugins/dropify/dist/js/dropify.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
     <script>
     $(document).ready(function() {
         // Basic
         $('.dropify').dropify();
+        // For select 2
+        $(".select2").select2();
+        $('.selectpicker').selectpicker();
 
     });
 

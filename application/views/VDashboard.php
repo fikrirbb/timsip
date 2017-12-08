@@ -33,7 +33,7 @@
                                                   <div class="col-8"><h2 class="text-white">2376 <i class="ti-angle-down font-14"></i></h2>
                                                       <h6 class="text-white">Transaksi Hari Ini</h6></div>
                                                   <div class="col-4 align-self-center text-right  p-l-0">
-                                                    <h1 class="text-white"><i class="ti-light-bulb"></i></h1>
+                                                    <h1 class="text-white"><i class="fa fa-dollar"></i></h1>
                                                   </div>
                                               </div>
                                           </div>
@@ -48,7 +48,7 @@
                                                   <div class="col-8"><h2 class="text-white">3670 <i class="ti-angle-up font-14"></i></h2>
                                                       <h6 class="text-white">Stok Barang</h6></div>
                                                   <div class="col-4 align-self-center text-right p-l-0">
-                                                      <h1 class="text-white"><i class="ti-light-bulb"></i></h1>
+                                                      <h1 class="text-white"><i class="fa fa-truck"></i></h1>
                                                     </div>
                                               </div>
                                           </div>
@@ -63,12 +63,16 @@
                                                   <div class="col-8"><h2 class="text-white">1562 <i class="ti-angle-up font-14 text-success"></i></h2>
                                                       <h6 class="text-white">Data Barang</h6></div>
                                                   <div class="col-4 align-self-center text-right p-l-0">
-                                                      <h1 class="text-white"><i class="ti-light-bulb"></i></h1>
+                                                      <h1 class="text-white"><i class="mdi mdi-package-variant-closed"></i></h1>
                                                     </div>
                                               </div>
                                           </div>
                                       </div>
                                   </div>
+
+                                  <div class="col-md-12">
+
+                                                      </div>
 
             </div>
 

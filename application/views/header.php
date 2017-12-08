@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url()?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/plugins/dropify/dist/css/dropify.min.css" rel="stylesheet" >
+   <link href="<?php echo base_url()?>assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
     <link href="<?php echo base_url()?>assets/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
@@ -191,21 +192,21 @@
                         <li class="nav-small-cap">PERSONAL</li>
                         <li class="active"> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
-                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Penjualan</span></a>
+                        <li class=""> <a class="waves-effect waves-dark" href="<?php echo base_url("index.php/CPenjualan") ?>"><i class="mdi mdi-cart"></i><span class="hide-menu">Penjualan</span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Master</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-database"></i><span class="hide-menu">Master</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="app-calendar.html">Barang</a></li>
                                 <li><a href="app-chat.html">Stok</a></li>
                             </ul>
                         </li>
-                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Laporan</span></a>
+                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-chart-areaspline"></i><span class="hide-menu">Laporan</span></a>
                         </li>
 
                         <li class="nav-small-cap">OTHER</li>
-                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Akun</span></a>
+                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-account"></i><span class="hide-menu">Akun</span></a>
                         </li>
-                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Logout</span></a>
+                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-logout"></i><span class="hide-menu">Logout</span></a>
                         </li>
 
 
