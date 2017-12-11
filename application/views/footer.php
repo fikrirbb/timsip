@@ -21,6 +21,8 @@
 <script src="<?php echo base_url()?>assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap tether Core JavaScript -->
 <script src="<?php echo base_url()?>assets/plugins/bootstrap/js/popper.min.js"></script>
+<!-- This is data table -->
+<script src="<?php echo base_url()?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
 
 <script src="<?php echo base_url()?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
@@ -34,22 +36,25 @@
 <script src="<?php echo base_url()?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
 <!--Custom JavaScript -->
 <script src="<?php echo base_url()?>assets/js/custom.min.js"></script>
+<!-- This is data table -->
+<script src="<?php echo base_url()?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->
 <script src="<?php echo base_url()?>assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-
-<script src="<?php echo base_url()?>assets/plugins/dropify/dist/js/dropify.min.js"></script>
 <script src="<?php echo base_url()?>assets/plugins/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+
     <script>
     $(document).ready(function() {
         // Basic
-        $('.dropify').dropify();
+        $('#myTable').DataTable();
         // For select 2
         $(".select2").select2();
         $('.selectpicker').selectpicker();
 
+
     });
+
 
     </script>
 

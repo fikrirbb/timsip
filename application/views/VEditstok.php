@@ -1,25 +1,10 @@
-<!-- ============================================================== -->
+<!-- 254.499.900 ============================================================== -->
 <!-- Page wrapper  -->
 <!-- ============================================================== -->
 <div class="page-wrapper">
     <!-- ============================================================== -->
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
-    <div class="row page-titles">
-        <div class="col-md-5 align-self-center">
-            <h3 class="text-themecolor">Animation</h3>
-        </div>
-        <div class="col-md-7 align-self-center">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item">pages</li>
-                <li class="breadcrumb-item active">Animation</li>
-            </ol>
-        </div>
-        <div>
-            <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
-        </div>
-    </div>
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
@@ -32,79 +17,62 @@
         <!-- ============================================================== -->
         <div class="row">
             <div class="col-12">
-			<div class="card card-outline-info">
+			<div class="card card-outline-info m-t-30">
                             <div class="card-header">
-                                <h4 class="m-b-0 text-white">Edit Stok</h4>
+                                <h4 class="m-b-0 text-white">Edit Barang</h4>
                             </div>
                             <div class="card-body">
-                                <form action="form-layout.html#">
+                                  <?php echo form_open('CStok/edit/'.$barang['brg_id']); ?>
                                     <div class="form-body">
-                                        
-                                        <hr>
-                                        <div class="row p-t-20">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Id Barang</label>
-                                                    <input type="text" name="brg_id" class="form-control" placeholder="id">
-                                                    <small class="form-control-feedback"> </small> </div>
-                                            </div>
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Harga Barang</label>
-                                                    <input type="text" name="brg_harga" class="form-control" placeholder="Rp.">
-                                                    <small class="form-control-feedback"></small> </div>
-                                            </div>
-                                            <!--/span-->
-                                        </div>
-                                        <!--/row-->
-                                        <div class="row p-t-20">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Nama Barang</label>
-                                                    <input type="text" name="brg_id" class="form-control" placeholder="nama barang">
-                                                    <small class="form-control-feedback"></small> </div>
-                                            </div>
-                                            
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group has-success">
-                                                    <label class="control-label">Jenis Barang</label>
-                                                    <select class="form-control custom-select">
-                                                        <option value="">Kering</option>
-                                                        <option value="">Basah</option>
-                                                    </select>
-                                                    <small class="form-control-feedback"> Pilih jenis barang </small> </div>
-                                            </div>
-                                            <!--/span-->
-                                        </div>
-                                        <!--/row-->
-                                        <div class="row p-t-20">
-										<div class="col-md-6">
-                                           <div class="form-group">
-                                                    <label class="control-label">Masa Berlaku Barang</label>
-                                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <label class="control-label">Nama Barang</label>
+                                                  <input type="text" name="brg_nama" class="form-control" placeholder="Roti Manis" value="<?php echo ($this->input->post('brg_nama') ? $this->input->post('brg_nama') : $barang['brg_nama']); ?>" readonly>
+                                                  <small class="form-control-feedback text-danger"><?php echo form_error('brg_nama');?></small>
                                                 </div>
-												</div>
+                                          </div>
                                             <!--/span-->
-											<div class="col-lg-6 col-md-6">
-													<label for="input-file-now">Upload Gambar</label>
-													<input type="file" id="input-file-now" class="dropify" />
+                                            <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <label class="control-label">Harga Barang</label>
+                                                  <div class="input-group"> <span class="input-group-addon">Rp</span>
+                                          <input type="number" name="brg_harga" readonly class="form-control"  data-validation-required-message="This field is required" value="<?php echo ($this->input->post('brg_harga') ? $this->input->post('brg_harga') : $barang['brg_harga']); ?>"></div>
+                                              </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Stok Barang</label>
+                                        <input type="number" name="brg_stok" required class="form-control"  data-validation-required-message="This field is required" value="<?php echo ($this->input->post('brg_stok') ? $this->input->post('brg_stok') : $barang['brg_stok']); ?>">
+                                            </div>
+                                          </div>
+                                            <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <label class="control-label">Batas Minimal</label>
+                                          <input type="number" name="brg_min" required class="form-control"  data-validation-required-message="This field is required" value="<?php echo ($this->input->post('brg_min') ? $this->input->post('brg_min') : $barang['brg_min']); ?>">
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                            <button type="submit" class="btn btn-info waves-effect waves-light m-r-10 col-2">Simpan</button>
+                                            <button type="submit" class="btn btn-secondary waves-effect waves-light col-2">Cancel</button>
+                                         </div>
+                                        </div>
 
-											</div>
-								</div>
-								<button type="simpan" class="btn btn-success waves-effect waves-light m-r-10">Simpan</button>
-                                        <button type="simpan" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+</div>
+<?php echo form_close(); ?>
 
-</div>								
-				
-				
-				
             </div>
-        </div>	
-				
-				
-        
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
         <!-- ============================================================== -->
         <!-- End PAge Content -->
         <!-- ============================================================== -->

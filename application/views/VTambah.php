@@ -5,21 +5,6 @@
     <!-- ============================================================== -->
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
-    <div class="row page-titles">
-        <div class="col-md-5 align-self-center">
-            <h3 class="text-themecolor">Animation</h3>
-        </div>
-        <div class="col-md-7 align-self-center">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item">pages</li>
-                <li class="breadcrumb-item active">Animation</li>
-            </ol>
-        </div>
-        <div>
-            <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
-        </div>
-    </div>
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
@@ -32,73 +17,70 @@
         <!-- ============================================================== -->
         <div class="row">
             <div class="col-12">
-			<div class="card card-outline-info">
+			<div class="card card-outline-info m-t-30">
                             <div class="card-header">
-                                <h4 class="m-b-0 text-white">Input Barang</h4>
+                                <h4 class="m-b-0 text-white">Tambah Barang</h4>
                             </div>
                             <div class="card-body">
-                                <form action="form-layout.html#">
+                                  <?php echo form_open('CBarang/tambah'); ?>
                                     <div class="form-body">
-                                        <div class="row p-t-20">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Id Barang</label>
-                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
-                                                    <small class="form-control-feedback"> </small> </div>
-                                            </div>
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Harga Barang</label>
-                                                    <input type="text" name="brg_harga" class="form-control" placeholder="12n">
-                                                    <small class="form-control-feedback"> input harga barang </small> </div>
-                                            </div>
-                                            <!--/span-->
-                                        </div>
-                                        <!--/row-->
-                                        <div class="row p-t-20">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">Nama Barang</label>
-                                                    <input type="text" name="brg_id" class="form-control" placeholder="John doe">
-                                                    <small class="form-control-feedback"> input nama barang </small> </div>
-                                            </div>
-
-                                            <!--/span-->
-                                            <div class="col-md-6">
-                                                <div class="form-group has-success">
-                                                    <label class="control-label">Jenis Barang</label>
-                                                    <select class="form-control custom-select">
-                                                        <option value="">Kering</option>
-                                                        <option value="">Basah</option>
-                                                    </select>
-                                                    <small class="form-control-feedback"> Pilih jenis barang </small> </div>
-                                            </div>
-                                            <!--/span-->
-                                        </div>
-                                        <!--/row-->
-                                        <div class="row p-t-20">
-										<div class="col-md-6">
-                                           <div class="form-group">
-                                                    <label class="control-label">Masa Berlaku Barang</label>
-                                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <label class="control-label">Nama Barang</label>
+                                                  <input type="text" name="brg_nama" required="" class="form-control" placeholder="Roti Manis">
+                                                  <small class="form-control-feedback text-danger"><?php echo form_error('brg_nama');?></small>
                                                 </div>
-												</div>
+                                          </div>
                                             <!--/span-->
-											<div class="col-lg-6 col-md-6">
-													<label for="input-file-now">Upload Gambar</label>
-													<input type="file" id="input-file-now" class="dropify" />
+                                            <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <label class="control-label">Jenis Barang</label>
+                                                  <select class="form-control custom-select" required="" name="brg_jenis">
+                                                    <option value="">Pilih</option>
+                                                    <?php
+                                                    $brg_jenis_values = array(
+                                                      'Basah'=>'Basah',
+                                                      'Kering'=>'Kering',
+                                                    );
 
-											</div>
-								</div>
-								<button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                                                    foreach($brg_jenis_values as $value => $display_text)
+                                                    {
+                                                      $selected = ($value == $barang['brg_jenis']) ? ' selected="selected"' : "";
+
+                                                      echo '<option value="'.$value.'" '.$selected.'>'.$display_text.'</option>';
+                                                    }
+                                                    ?>
+                                                  </select>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <label class="control-label">Harga Barang</label>
+                                                  <div class="input-group"> <span class="input-group-addon">Rp</span>
+                                          <input type="number" name="brg_harga" required="" class="form-control"  data-validation-required-message="This field is required"> </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6 m-t-30">
+                                              <button type="submit" class="btn btn-info waves-effect waves-light m-r-10 col-2">Simpan</button>
+                                              <button type="submit" class="btn btn-secondary waves-effect waves-light col-2">Cancel</button>
+												                   </div>
+                                        </div>
+
 
 </div>
 
-
+<?php echo form_close(); ?>
 
             </div>
+        </div>
+        </div>
+        </div>
+        </div>
         </div>
         <!-- ============================================================== -->
         <!-- End PAge Content -->
