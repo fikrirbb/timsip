@@ -1,19 +1,22 @@
 <?php
 class CBarang extends CI_Controller{
+	public $data = array();
+
 	function __construct(){
 		parent::__construct();
 		$this->load->model('MBarang');
     if ($this->session->userdata('status') != "login") {
 			redirect(base_url('index.php/CLogin/'));
 		}
+		$this->data['notif'] = $this->MBarang->get_notif();
 	}
+
 	function index()
 	{
+		$this->data['barang'] = $this->MBarang->get_all_data("barang");
 
-		$data['barang'] = $this->MBarang->get_all_data("barang");
-
-		$this->load->view('header');
-		$this->load->view('VBarang',$data);
+		$this->load->view('header',$this->data);
+		$this->load->view('VBarang');
 		$this->load->view('footer');
 	}
 
@@ -39,7 +42,7 @@ class CBarang extends CI_Controller{
 					}
 					else
 					{
-						$this->load->view('header');
+						$this->load->view('header', $this->data);
 						$this->load->view('VTambah');
 						$this->load->view('footer');
 					}
@@ -48,10 +51,10 @@ class CBarang extends CI_Controller{
 	function edit($brg_id)
 	{
 			// check if the barang exists before trying to edit it
-			$data = array('brg_id'=>$brg_id);
-			$data['barang'] = $this->MBarang->get_data("barang",$data);
+			$this->data2 = array('brg_id'=>$brg_id);
+			$this->data['barang'] = $this->MBarang->get_data("barang",$this->data2);
 
-			if(isset($data['barang']['brg_id']))
+			if(isset($this->data['barang']['brg_id']))
 			{
 				$this->load->library('form_validation');
 
@@ -72,7 +75,7 @@ class CBarang extends CI_Controller{
 					}
 					else
 					{
-						$this->load->view('header',$data);
+						$this->load->view('header',$this->data);
 						$this->load->view('VEdit');
 						$this->load->view('footer');
 					}
@@ -83,14 +86,14 @@ class CBarang extends CI_Controller{
 
 	function hapus($brg_id)
 	{
-			$data = array('brg_id'=>$brg_id);
-			$barang = $this->MBarang->get_data("barang",$data);
+			$this->data = array('brg_id'=>$brg_id);
+			$barang = $this->MBarang->get_data("barang",$this->data);
 
 			// check if the barang exists before trying to delete it
 			if(isset($barang['brg_id']))
 			{
-					$data = array('brg_id'=>$brg_id);
-					$this->MBarang->delete_data("barang", $data);
+					$this->data = array('brg_id'=>$brg_id);
+					$this->MBarang->delete_data("barang", $this->data);
 					redirect('CBarang/index');
 			}
 			else

@@ -1,28 +1,31 @@
 <?php
 class CStok extends CI_Controller{
+	public $data = array();
+
 	function __construct(){
 		parent::__construct();
 		$this->load->model('MBarang');
     if ($this->session->userdata('status') != "login") {
 			redirect(base_url('index.php/CLogin/'));
 		}
+		$this->data['notif'] = $this->MBarang->get_notif();
 	}
 	function index()
 	{
-		$data['barang'] = $this->MBarang->get_all_data("barang");
+		$this->data['barang'] = $this->MBarang->get_all_data("barang");
 
-		$this->load->view('header');
-		$this->load->view('VStok',$data);
+		$this->load->view('header',$this->data);
+		$this->load->view('VStok');
 		$this->load->view('footer');
 	}
 
 	function edit($brg_id)
 	{
 		// check if the barang exists before trying to edit it
-		$data = array('brg_id'=>$brg_id);
-		$data['barang'] = $this->MBarang->get_data("barang",$data);
+		$this->data2 = array('brg_id'=>$brg_id);
+		$this->data['barang'] = $this->MBarang->get_data("barang",$this->data2);
 
-		if(isset($data['barang']['brg_id']))
+		if(isset($this->data['barang']['brg_id']))
 		{
 			$this->load->library('form_validation');
 
@@ -41,7 +44,7 @@ class CStok extends CI_Controller{
 				}
 				else
 				{
-					$this->load->view('header',$data);
+					$this->load->view('header',$this->data);
 					$this->load->view('VEditStok');
 					$this->load->view('footer');
 				}

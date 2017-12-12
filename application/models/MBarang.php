@@ -11,6 +11,14 @@ class Mbarang extends CI_Model
         parent::__construct();
     }
 
+    function get_notif()
+    {
+      return $query = $this->db->query("select * from barang where brg_stok <= brg_min")->result_array();
+        //$this->db->from('barang');
+        //$this->db->where('brg_id',$id);
+        //return $this->db->count_all_results();
+    }
+
     /*
      * Get barang by brg_id
      */

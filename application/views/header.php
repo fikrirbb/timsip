@@ -84,34 +84,18 @@
                             <div class="dropdown-menu mailbox scale-up-left">
                                 <ul>
                                     <li>
-                                        <div class="drop-title">Pemberitahuan</div>
+                                        <div class="drop-title">Pemberitahuan Stok</div>
                                     </li>
                                     <li>
                                         <div class="message-center">
+                                           <?php foreach($notif as $n){ ?>
                                             <!-- Message -->
-                                            <a href="index4.html#">
+                                            <a href="">
                                                 <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
                                                 <div class="mail-contnet">
-                                                    <h5>Luanch Admin</h5> <span class="mail-desc">Just see the my new admin!</span> <span class="time">9:30 AM</span> </div>
+                                                    <h5><?php echo $n['brg_nama']; ?></h5> <span class="mail-desc"> Stok tersedia <?php echo $n['brg_stok']; ?></span> <span class="time">9:30 AM</span> </div>
                                             </a>
-                                            <!-- Message -->
-                                            <a href="index4.html#">
-                                                <div class="btn btn-success btn-circle"><i class="ti-calendar"></i></div>
-                                                <div class="mail-contnet">
-                                                    <h5>Event today</h5> <span class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span> </div>
-                                            </a>
-                                            <!-- Message -->
-                                            <a href="index4.html#">
-                                                <div class="btn btn-info btn-circle"><i class="ti-settings"></i></div>
-                                                <div class="mail-contnet">
-                                                    <h5>Settings</h5> <span class="mail-desc">You can customize this template as you want</span> <span class="time">9:08 AM</span> </div>
-                                            </a>
-                                            <!-- Message -->
-                                            <a href="index4.html#">
-                                                <div class="btn btn-primary btn-circle"><i class="ti-user"></i></div>
-                                                <div class="mail-contnet">
-                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
-                                            </a>
+                                             <?php } ?>
                                         </div>
                                     </li>
                                 </ul>
