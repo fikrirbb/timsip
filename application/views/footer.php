@@ -52,6 +52,73 @@
         $(".select2").select2();
         $('.selectpicker').selectpicker();
 
+        //cart
+        $('.add_cart').click(function(){
+         var brg_id = $(this).data("brgid");
+         var brg_name = $(this).data("brgname");
+         var brg_harga = $(this).data("brgharga");
+         var qty = $('#' + brg_id).val();
+         if(qty != '' && qty > 0)
+         {
+          $.ajax({
+           url:"<?php echo site_url(); ?>Cpenjualan/tambah",
+           method:"POST",
+           data:{brg_id:brg_id, brg_name:brg_name, brg_harga:brg_harga, qty:qty},
+           success:function(data)
+           {
+            alert("Product Added into Cart");
+            $('#cart_details').html(data);
+            $('#' + brg_id).val('');
+           }
+          });
+         }
+         else
+         {
+          alert("Please Enter quantity");
+         }
+        });
+
+        $('#cart_details').load("<?php echo site_url(); ?>Cpenjualan/load");
+
+        $(document).on('click', '.remove_inventory', function(){
+ var row_id = $(this).attr("id");
+ if(confirm("Are you sure you want to remove this?"))
+ {
+  $.ajax({
+   url:"<?php echo site_url(); ?>Cpenjualan/remove",
+   method:"POST",
+   data:{row_id:row_id},
+   success:function(data)
+   {
+    alert("Product removed from Cart");
+    $('#cart_details').html(data);
+   }
+  });
+ }
+ else
+ {
+  return false;
+ }
+});
+
+$(document).on('click', '#clear_cart', function(){
+  if(confirm("Are you sure you want to clear cart?"))
+  {
+   $.ajax({
+    url:"<?php echo base_url(); ?>shopping_cart/clear",
+    success:function(data)
+    {
+     alert("Your cart has been clear...");
+     $('#cart_details').html(data);
+    }
+   });
+  }
+  else
+  {
+   return false;
+  }
+ });
+
 
     });
 

@@ -173,7 +173,7 @@
                     <ul id="sidebarnav">
                          <li class="nav-devider"></li>
                         <li class="nav-small-cap">PERSONAL</li>
-                        <li class="active"> <a class="waves-effect waves-dark" href="<?php echo site_url() ?>"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
+                        <li class=""> <a class="waves-effect waves-dark" href="<?php echo site_url() ?>"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
                         <li class=""> <a class="waves-effect waves-dark" href="<?php echo site_url("CPenjualan") ?>"><i class="mdi mdi-cart"></i><span class="hide-menu">Penjualan</span></a>
                         </li>
@@ -182,6 +182,8 @@
                                 <li><a href="<?php echo site_url("CBarang") ?>">Barang</a></li>
                                 <li><a href="<?php echo site_url("CStok") ?>">Stok</a></li>
                             </ul>
+                        </li>
+                        <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-currency-usd"></i><span class="hide-menu">Pengeluaran</span></a>
                         </li>
                         <li class=""> <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-chart-areaspline"></i><span class="hide-menu">Laporan</span></a>
                         </li>

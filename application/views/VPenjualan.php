@@ -40,7 +40,7 @@
 
                         </div>
                         <div class="col-lg-4">
-                          <button type="submit" class="btn btn-block btn-lg btn-info">Rp 13,000</button>
+                          <button type="submit" class="btn btn-block btn-lg btn-info">Bayar Rp 13,000</button>
                         </div>
                     </div>
                     <div class="row">
@@ -55,7 +55,7 @@
                         <div class="form-group">
                             <label>Banyak Barang</label>
                             <div class="input-group">
-                                <input type="number" name="onlyNum" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false" placeholder="Qty"> </div>
+                                <input type="number" name="qty" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false" placeholder="Qty"> </div>
                         </div>
                       </div>
                       <div class="col-lg-2 m-t-30">
@@ -63,7 +63,11 @@
                       </div>
                     </div>
 
-                    <div class="table-responsive">
+                    <div id="cart_details">
+                      <h3 align="center">Cart is Emty</h3>
+                    </div>
+
+                  <!--  <div class="table-responsive">
 <table class="table table-bordered color-bordered-table info-bordered-table">
 <thead>
 <tr>
@@ -72,19 +76,25 @@
     <th>Qty</th>
     <th>Harga @</th>
     <th>Sub Total</th>
+    <th><button onclick="hapusSemua()" class="btn btn-default hapus-semua">Hapus Semua</button>
 </tr>
 </thead>
 <tbody>
-<tr>
-    <td>1</td>
-    <td>ROTI SUWIR</td>
-    <td>3</td>
-    <td>3.000</td>
-    <td>9.000</td>
-</tr>
+  <?php /*foreach ($this->cart->contents() as $items){ ?>
+    <tr>
+      <td><?= $items['id'] ?></td>
+      <td><?= $items['name'] ?></td>
+      <td><?= $items['qty'] ?></td>
+      <td><?= $items['price'] ?></td>
+      <td><?= $total = $items['price']*$items['qty'] ?></td>
+      <td><a onClick='delete_row("<?= $items['rowid'] ?>")'>Hapus</a></td>
+    </tr>
+  <?php
+  }
+  */?>
 </tbody>
 </table>
-</div>
+</div> -->
 
                   </div>
               </div>
